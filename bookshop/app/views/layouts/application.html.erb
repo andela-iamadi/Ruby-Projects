@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Bookshop</title>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+	<%= csrf_meta_tags %>
+</head>
+
+<body ng-app="myApp">
+	<div class="header">
+	  	<div class="container">
+	    	<h1>Book End</h1>
+	 	</div>
+	</div>
+
+<%= yield %>
+
+</body>
+</html>

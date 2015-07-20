@@ -1,0 +1,60 @@
+
+<header>
+	<div class="sidebar">
+		<!--logo goes here -->
+		<h3><i class="fa fa-calendar"></i><span>Mark Up</span>
+			</h3>
+	</div>
+
+	<div class="tool-bar">
+			<!--username log form goes here -->
+	  <%
+
+	    @session = @sessions[0]
+	    @day = @session.days[0]
+	    @attendance = Attendance.new
+	  %>
+	  <div class="container">
+	    <%= form_for(@attendance) do |f| %>
+	    	<div class="field">
+	        <%= date_field(:day, :created_on) %>&nbsp;&nbsp;&nbsp;
+	        <select name="session_id" id="session_id">
+	          <option value="1">Morning session</option>
+	          <option value="2">Afternoon session</option>
+	        </select>&nbsp;&nbsp;&nbsp;
+	      </div>
+	      <div class="actions">
+	        <%= f.submit "Add" %>
+	      </div>
+	    <% end %>
+
+	  </div>
+	</div>
+</header>
+
+<content>
+	<div class="sidebar">
+		<!--notes tab -->
+		<ul class="notes-thumb">
+			<li class="note-thumb active">Dashboard</li>
+			<li class="note-thumb">Reports</li>
+			<li class="note-thumb">Progress monitor</li>
+			<li class="note-thumb">Sessions</li>
+		</ul>
+	</div>
+
+	<div class="content-background">
+		<!-- check goes here -->
+
+	</div>
+</content>
+
+<footer>
+	<div class="add-note sidebar">
+	</div>
+	<div class="status-bar">
+		<div class="sync-button"><i class="fa fa-gear"></i></div>
+		<div class="sync-text">Sync is in progress</div>
+		<div class="note-status-message"></div>
+	</div>
+</footer>

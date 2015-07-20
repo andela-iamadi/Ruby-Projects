@@ -1,0 +1,18 @@
+{
+  "name": "Markup",
+  "version": "1.0.0",
+  "homepage": "https://github.com/tru2cent/Bootcamp-project",
+  "authors": [
+    "Innocent 'Cent' Amadi <innocent.amadi10@gmail.com>"
+  ],
+  "description": "A MarkUp app",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,21 @@
+  <%
+
+    @session = @sessions[0]
+    @day = @session.Days[:session_date]
+    @attendance = @day.Attendance.new
+  %>
+  <div class="container">
+    <%= form_for(@attendance) do |f| %>
+    	<div class="field">
+        <%= date_field(:day, :created_on) %>&nbsp;&nbsp;&nbsp;
+        <select name="session_id" id="session_id">
+          <option value="1">Morning session</option>
+          <option value="2">Afternoon session</option>
+        </select>&nbsp;&nbsp;&nbsp;
+      </div>
+      <div class="actions">
+        <%= f.submit "Add" %>
+      </div>
+    <% end %>
+
+  </div>
